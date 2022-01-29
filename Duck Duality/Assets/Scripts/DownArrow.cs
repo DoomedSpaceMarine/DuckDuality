@@ -16,14 +16,14 @@ public class DownArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) && mm.gameActive == true)
         {
-            mm.arrowKeys[2].sprite = mm.highlightArrowKeys[2];
+            mm.arrowKeys[3].sprite = mm.highlightArrowKeys[3];
         }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow) && mm.gameActive == true)
         {
-            mm.arrowKeys[2].sprite = mm.normalArrowKeys[2];
-            thisKeyNumber = 2;
+            mm.arrowKeys[3].sprite = mm.normalArrowKeys[3];
+            thisKeyNumber = 3;
             mm.ArrowKeyPressed(thisKeyNumber);
 
         }

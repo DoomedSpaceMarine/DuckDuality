@@ -16,11 +16,11 @@ public class UpArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && mm.gameActive == true)
         {
             mm.arrowKeys[0].sprite = mm.highlightArrowKeys[0];
         }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.UpArrow) && mm.gameActive == true)
         {
             mm.arrowKeys[0].sprite = mm.normalArrowKeys[0];
             thisKeyNumber = 0;

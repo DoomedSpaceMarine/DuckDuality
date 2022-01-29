@@ -17,11 +17,11 @@ public class LeftArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && mm.gameActive == true)
         {
             mm.arrowKeys[1].sprite = mm.highlightArrowKeys[1];
         }
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow) && mm.gameActive == true)
         {
             mm.arrowKeys[1].sprite = mm.normalArrowKeys[1];
             thisKeyNumber = 1;
